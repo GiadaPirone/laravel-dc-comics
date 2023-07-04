@@ -26,11 +26,6 @@
                 <label for="exampleFormControlTextarea1" class="form-label">Prezzo Fumetto</label>
                 <input type="text" class="form-control" id="price" name="price" placeholder="3.22">
             </div>
-            
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Data</label>
-                <input type="text" class="form-control" id="sale_date" name="sale_date" placeholder="2018-10-25">            </div>
-            </div>
 
             <input type="submit" value="invia">
 

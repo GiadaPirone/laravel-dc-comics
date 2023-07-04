@@ -36,7 +36,17 @@ class FumettoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newFumetto = new Fumetto;
+
+        $newFumetto->title = $data["title"];
+        $newFumetto->description = $data["description"];
+        $newFumetto->price = $data["price"];
+
+        $newFumetto->save();
+
+        return redirect()->route('fumetti.show', $newFumetto->id);
     }
 
     /**

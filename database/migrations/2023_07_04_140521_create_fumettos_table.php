@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string("price");
             $table->string("series", 50)->nullable();
             $table->string("type",50)->nullable();
-            $table->date("sale_date");
+            $table->date("sale_date")->nullable();
             $table->timestamps();
         });
     }

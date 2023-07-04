@@ -47,8 +47,8 @@ class FumettoController extends Controller
      */
     public function show($id)
     {
-       $fumetti = Fumetto::find($id);
-       return view("fumetti.show", compact("fumetti"));
+       $fumetto = Fumetto::find($id);
+       return view("fumetti.show", compact("fumetto"));
     }
 
     /**

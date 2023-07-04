@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                   <h5 class="card-title">{{$fumetto ->title}}</h5>
-                  <img src="{{$fumetto ->thumb}}" alt="{{$fumetto ->title}}">
+                 <a href="{{route("fumetti.show", $fumetto->id)}}"><img src="{{$fumetto ->thumb}}" alt="{{$fumetto ->title}}"></a> 
                   
                   <p class="card-text">Descrizione: {{$fumetto ->description}}</p>
                   <p class="card-text">Prezzo: {{$fumetto ->price}}</p>

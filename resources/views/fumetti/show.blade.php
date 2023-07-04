@@ -19,6 +19,10 @@
                       <p class="card-text">Data: {{$fumetto ->sale_date}}</p>
                       
                     </div>
+
+                    <button type="button" class="btn btn-warning">
+                        <a href="{{route("fumetti.index")}}">Torna alla Home</a>
+                    </button>
                 </div>
                     
                 

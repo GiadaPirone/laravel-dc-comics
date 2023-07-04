@@ -9,6 +9,9 @@
                 
                 <div class="card m-3 " style="width: 18rem;">
     
+                    <button type="button" class="btn btn-warning">
+                        <a href="{{route("fumetti.index")}}">Torna alla Home</a>
+                    </button>
                     <div class="card-body">
                       <h5 class="card-title">{{$fumetto ->title}}</h5>
                      <a href="{{route("fumetti.show", $fumetto->id)}}"><img src="{{$fumetto ->thumb}}" alt="{{$fumetto ->title}}"></a> 
@@ -20,9 +23,6 @@
                       
                     </div>
 
-                    <button type="button" class="btn btn-warning">
-                        <a href="{{route("fumetti.index")}}">Torna alla Home</a>
-                    </button>
                 </div>
                     
                 

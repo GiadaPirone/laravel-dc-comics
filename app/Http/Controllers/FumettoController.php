@@ -25,7 +25,7 @@ class FumettoController extends Controller
      */
     public function create()
     {
-        //
+        return view("fumetti.create");
     }
 
     /**

@@ -67,9 +67,9 @@ class FumettoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Fumetto $fumetto)
+    public function edit(Fumetto $fumetti)
     {
-        return view("fumetti.edit", compact("fumetto"));
+        return view("fumetti.edit", compact("fumetti"));
     }
 
     /**
@@ -79,7 +79,7 @@ class FumettoController extends Controller
      * @param  Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Fumetti $fumetti)
+    public function update(Request $request, Fumetto $fumetti)
     {
         $data = $request->all();
 
@@ -95,11 +95,13 @@ class FumettoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Fumetto $fumetti)
     {
-        //
+        $fumetti ->delete();
+
+        return redirect()->route('fumetti.index');
     }
 }

@@ -17,6 +17,13 @@
                         <a href="{{route("fumetti.edit", $fumetto)}}">Modifica Fumetto</a>
                     </button>
 
+                     <form action="{{route ("fumetti.destroy",$fumetto )}}" method="POST">
+                        @csrf
+                        @method("DELETE")
+                        <input type="submit" value="cancella">
+                
+                    </form>
+
                     <div class="card-body">
                       <h5 class="card-title">{{$fumetto ->title}}</h5>
                      <a href="{{route("fumetti.show", $fumetto->id)}}"><img src="{{$fumetto ->thumb}}" alt="{{$fumetto ->title}}"></a> 

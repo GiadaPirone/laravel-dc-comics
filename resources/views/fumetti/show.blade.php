@@ -12,6 +12,11 @@
                     <button type="button" class="btn btn-warning">
                         <a href="{{route("fumetti.index")}}">Torna alla Home</a>
                     </button>
+
+                    <button type="button" class="btn btn-warning">
+                        <a href="{{route("fumetti.edit", $fumetto)}}">Modifica Fumetto</a>
+                    </button>
+
                     <div class="card-body">
                       <h5 class="card-title">{{$fumetto ->title}}</h5>
                      <a href="{{route("fumetti.show", $fumetto->id)}}"><img src="{{$fumetto ->thumb}}" alt="{{$fumetto ->title}}"></a> 

@@ -67,21 +67,29 @@ class FumettoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Fumetto $fumetto)
     {
-        //
+        return view("fumetti.edit", compact("fumetto"));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Fumetti $fumetti)
     {
-        //
+        $data = $request->all();
+
+        $fumetti->title = $data["title"];
+        $fumetti->description = $data["description"];
+        $fumetti->price = $data["price"];
+
+        $fumetti->update();
+
+        return redirect()->route("fumetti.show", $fumetti->id);
     }
 
     /**

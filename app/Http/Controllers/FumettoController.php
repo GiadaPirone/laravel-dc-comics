@@ -16,7 +16,7 @@ class FumettoController extends Controller
             "thumb" => "max:1000",
             "price" => "required|min:4|max:10",
             "series" => "min:4|max:50",
-            "type" => "min:4|max:50",
+            "type" => "required",
             "sale_date" => "min:4|max:50",
         ], [
             "title.required"=> "il titolo è obbligatorio",
@@ -28,6 +28,8 @@ class FumettoController extends Controller
 
             "price.required"=> "L'inserimentio del prezzo è obbligatorio",
             "price.min" => "inserire minimo :min cifre",
+
+            "type.required" => "obbligatorio inserire il tipo"
 
         ])->validate();
 

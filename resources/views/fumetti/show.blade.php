@@ -32,6 +32,8 @@
                       <p class="card-text">Prezzo: {{$fumetto ->price}}</p>
                       <p class="card-text">Tipo: {{$fumetto ->type}}</p>
                       <p class="card-text">Data: {{$fumetto ->sale_date}}</p>
+                      <p class="card-text">Serie: {{$fumetto ->series}}</p>
+
                       
                     </div>
 

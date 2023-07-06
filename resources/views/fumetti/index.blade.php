@@ -18,15 +18,9 @@
                   <p class="card-text">Descrizione: {{$fumetto ->description}}</p>
                   <p class="card-text">Prezzo: {{$fumetto ->price}}</p>
                   <p class="card-text">Tipo: {{$fumetto ->type}}</p>
-                  {{-- <p class="card-text">Data: {{$fumetto ->sale_date}}</p> --}}
-
-                {{-- <form action="{{route ("fumetti.destroy",$fumetti->id  )}}" method="POST">
-                @csrf
-                @method("DELETE")
-                <input type="submit" value="cancella">
-                
-                </form> --}}
-                  
+                  <p class="card-text">Data: {{$fumetto ->sale_date}}</p>
+                  <p class="card-text">Series: {{$fumetto ->series}}</p>
+        
                 </div>
             </div>
                 

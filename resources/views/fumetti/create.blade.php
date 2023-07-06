@@ -33,7 +33,7 @@
 
             <div class="mb-3">
                 <label for="thumb" class="form-label">Percorso Immagine Fumetto</label>
-                <input type="text" class="form-control  @error('thumb') in-invalid @enderror " id="thumb" name="thumb"  >
+                <input type="text" class="form-control  @error('thumb') is-invalid @enderror " id="thumb" name="thumb"   >
                 @error("thumb")
                     <div class="invalid-feedback">{{$message}}</div>
                 @enderror
@@ -41,7 +41,7 @@
 
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione Fumetto</label>
-                <textarea class="form-control @error('description') in-invalid @enderror" id="description" name="description" rows="3"></textarea>
+                <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3" value="{{old("description")}}"></textarea>
                 {{-- <input type="text" class="form-control" id="description" name="description" rows="5" > --}}
                 @error("description")
                     <div class="invalid-feedback">{{$message}}</div>
@@ -58,7 +58,7 @@
             
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo Fumetto</label>
-                <input type="text" class="form-control  @error('price') in-invalid @enderror" id="price" name="price" placeholder="3.22">
+                <input type="text" class="form-control  @error('price') is-invalid @enderror" id="price" name="price" placeholder="3.22">
 
                 @error("price")
                     <div class="invalid-feedback">{{$message}}</div>
@@ -67,7 +67,7 @@
 
             <div class="mb-3">
                 <label for="sale_date" class="form-label">Data</label>
-                <input type="date" class="form-control  @error('sale_date') in-invalid @enderror" id="sale_date" name="sale_date">
+                <input type="date" class="form-control  @error('sale_date') is-invalid @enderror" id="sale_date" name="sale_date">
 
                 @error("sale_date")
                     <div class="invalid-feedback">{{$message}}</div>

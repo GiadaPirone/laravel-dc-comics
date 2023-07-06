@@ -113,7 +113,8 @@ class FumettoController extends Controller
      */
     public function update(Request $request, Fumetto $fumetti)
     {
-        $data = $request->all();
+        // $data = $request->all();
+        $data = $this->validateFumetto( $request->all() );
 
         $fumetti->title = $data["title"];
         $fumetti->thumb = $data["thumb"];

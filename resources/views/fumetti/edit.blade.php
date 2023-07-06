@@ -16,18 +16,28 @@
 
             <div class="mb-3">
                 <label for="title" class="form-label">Nome Fumetto</label>
-                <input type="text" class="form-control" id="title" name="title"  value="{{$fumetti->title}}">
+                <input type="text" class="form-control  @error('title') is-invalid @enderror" id="title" name="title"  value="{{old("title") ?? $fumetti->title}}">
+
+                @error("title")
+                    <div class="invalid-feedback">{{$message}}</div>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="thumb" class="form-label">Percorso Immagine Fumetto</label>
-                <input type="text" class="form-control" id="thumb" name="thumb" value="{{$fumetti->thumb}}" >
+                <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb" name="thumb" value="{{old("thumb") ?? $fumetti->thumb}}" >
+                @error("thumb")
+                    <div class="invalid-feedback">{{$message}}</div>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione Fumetto</label>
-                <textarea class="form-control" id="description" name="description" rows="3" value="{{$fumetti->description}}" ></textarea>
+                <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3" value="{{old("description") ?? $fumetti->description}}" ></textarea>
                 {{-- <input type="text" class="form-control" id="description" name="description" rows="3" value="{{$fumetto->description}}"> --}}
+                @error("description")
+                    <div class="invalid-feedback">{{$message}}</div>
+                @enderror
             </div>
 
             <div class="mb-3">
@@ -36,17 +46,22 @@
                     <option value="selected">Seleziona un tipo</option>
                     <option value="{{$fumetti->type}}">Comic Book</option>
                 </select>
-
             </div>
             
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo Fumetto</label>
-                <input type="text" class="form-control" id="price" name="price" placeholder="3.22" value="{{$fumetti->price}}">
+                <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" name="price" placeholder="3.22" value="{{old("price")??$fumetti->price}}">
+                @error("price")
+                    <div class="invalid-feedback">{{$message}}</div>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="price" class="form-label">Data</label>
-                <input type="date" class="form-control" id="sale_date" name="sale_date" value="{{$fumetti->sale_date}}">
+                <input type="date" class="form-control  @error('sale_date') is-invalid @enderror" id="sale_date" name="sale_date" value="{{old("sale_date")??$fumetti->sale_date}}">
+                @error("sale_date")
+                    <div class="invalid-feedback">{{$message}}</div>
+                @enderror
             </div>
 
             <input type="submit" value="invia">
